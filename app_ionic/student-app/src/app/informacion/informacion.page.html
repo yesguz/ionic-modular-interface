@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Información Personal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list lines="full" class="student-list">
+    <ion-list-header>
+      <ion-label>Perfil del Estudiante</ion-label>
+    </ion-list-header>
+
+    <!-- Usamos interpolación (doble llave) para mostrar los datos definidos en el TypeScript -->
+    <ion-item>
+      <ion-icon name="person-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        <h2>Nombre</h2>
+        <p>{{ estudiante.nombre }}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="school-outline" slot="start" color="secondary"></ion-icon>
+      <ion-label>
+        <h2>Carrera</h2>
+        <p>{{ estudiante.carrera }}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="time-outline" slot="start" color="tertiary"></ion-icon>
+      <ion-label>
+        <h2>Semestre</h2>
+        <p>{{ estudiante.semestre }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <h3 class="ion-margin-top ion-padding-start">Habilidades Técnicas</h3>
+  <div class="skills-container">
+    <!-- Usamos la directiva estructural *ngFor para iterar sobre el arreglo de habilidades -->
+    <ion-chip *ngFor="let hab of estudiante.habilidades" color="success" outline="true">
+      <ion-icon name="star-outline"></ion-icon>
+      <ion-label>{{ hab }}</ion-label>
+    </ion-chip>
+  </div>
+</ion-content>

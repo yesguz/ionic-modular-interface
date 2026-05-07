@@ -1,0 +1,12 @@
+.student-list {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  gap: 5px;
+}

@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Aquí usamos un ion-card para dar una bienvenida elegante -->
+  <!-- Esto muestra que sabemos usar componentes visuales de Ionic -->
+  <ion-card class="welcome-card">
+    <!-- Aquí es donde se carga la foto. Ahora busca en la carpeta local assets -->
+    <img src="assets/perfil.jpg" alt="Foto de perfil o bienvenida" />
+    <ion-card-header>
+      <ion-card-subtitle>Proyecto Universitario</ion-card-subtitle>
+      <ion-card-title>¡Bienvenido a mi App Ionic!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Esta aplicación fue desarrollada como parte de mi proyecto universitario. 
+      Utiliza Ionic framework con Angular para ofrecer una experiencia fluida tanto en web como en dispositivos móviles.
+      <br><br>
+      <ion-button expand="block" color="secondary" routerLink="/tabs/informacion">Ver Información Personal</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
